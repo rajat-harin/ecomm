@@ -10,14 +10,23 @@ import { OrderService } from './services/order.service';
 import { ProductService } from './services/product.service';
 import { ShoppingCartService } from './services/shopping-cart.service';
 import { UserService } from './services/user.service';
+import { ProductDetailsComponent } from './components/product-details/product-details.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
     ProductCardComponent,
-    ProductQuantityComponent
+    ProductQuantityComponent,
+    ProductDetailsComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule.forChild([
+      {
+        path: 'products/details/:id',
+        component: ProductDetailsComponent
+      }
+    ])
   ],
   exports: [
     ProductCardComponent,

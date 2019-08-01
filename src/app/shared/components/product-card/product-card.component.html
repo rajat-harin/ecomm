@@ -9,9 +9,12 @@
       class="btn btn-primary">
       Add to cart
     </button>
-    <ng-template #updateQuantity>
-      <!-- <app-product-quantity [product]="product" [shopping-cart]="shoppingCart">
-      </app-product-quantity> -->
+    <a class="btn btn-primary" [routerLink]="['/products/details/',product.payload.key]">
+      View
+    </a>
+    <!-- <ng-template #updateQuantity>
+     <app-product-quantity [product]="product" [shopping-cart]="shoppingCart">
+      </app-product-quantity>
       <div class="row no-gutters">
           <div class="col-2">
             <button 
@@ -27,6 +30,6 @@
               class="btn btn-secondary btn-block">+</button> 
           </div>
         </div>
-    </ng-template>
+    </ng-template> -->
   </div>
 </div>
