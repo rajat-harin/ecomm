@@ -51,6 +51,17 @@
           </div>
         </div>
       </div>
+      <div class="form-group">
+        <label for="desc">Product Description</label>
+        <input [(ngModel)]="product.description" #imageUrl="ngModel" name="desc" id="desc" type="textarea"
+          class="form-control" required url>
+        <div class="alert alert-danger" *ngIf="desc.touched && desc.invalid">
+
+          <div *ngIf="desc.errors.required">
+            Product Description is Required!
+          </div>
+        </div>
+      </div>
       <button class="btn btn-primary">Save</button>
       <button type="button" (click)="delete()" class="btn btn-danger">Delete</button>
 
